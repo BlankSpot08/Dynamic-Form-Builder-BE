@@ -1,6 +1,19 @@
-import { database } from "../../config/config.config";
+import Form from "../models/form.model"
 
-export function getAll() {
+export async function getAll() {
+    try {
+        const forms = await Form.find({});
+
+        return forms
+    } 
+    
+    catch(error) {
+        console.error('Repository error:', error.message);
+        throw new Error('Error retrieving forms from the database');
+    }
+}
+
+export async function get() {
     try {
 
     } 
@@ -10,17 +23,7 @@ export function getAll() {
     }
 }
 
-export function get() {
-    try {
-
-    } 
-    
-    catch(error) {
-
-    }
-}
-
-export function update() {
+export async function update() {
     try {
 
     } 

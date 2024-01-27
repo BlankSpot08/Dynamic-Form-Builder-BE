@@ -1,6 +1,6 @@
-import configs from './configs'
+import config from './config'
 
-const framework = configs.framework;
+const framework = config.framework;
 
 let httpServer = require("http").Server(framework);
 
@@ -15,3 +15,5 @@ httpServer.once("error", function (err) {
     logger.log(" Server Error:");
     logger.log(err);
 });
+
+httpServer.listen(config.environment.PORT)

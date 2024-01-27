@@ -1,31 +1,24 @@
 import { getAll, get, update } from "../services/form.service";
 
-export function getAll() {
+export async function getAll(req, res) {
     try {
+        const forms = await getAll();
 
+        return res.status(200).json({ 'forms': forms })
     } 
     
     catch(error) {
-
+        console.error('Controller error:', error.message);
+        res.status(500).json({ error: 'Internal Server Error' });
     }
 }
 
-export function get() {
-    try {
-
-    } 
-    
-    catch(error) {
-
-    }
+export async function getByTitle(req, res) {
 }   
 
-export function update() {
-    try {
-
-    } 
+export async function create(req, res) {
     
-    catch(error) {
+}
 
-    }
+export async function update(req, res) {
 }

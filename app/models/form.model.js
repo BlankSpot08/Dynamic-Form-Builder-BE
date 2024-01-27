@@ -9,7 +9,6 @@ const formSchema = new Schema({
     },
     description: {
         type: String,
-        required: false
     },
     fields: [   
         {
@@ -19,15 +18,12 @@ const formSchema = new Schema({
              },
              placeholder: {
                 type: String,
-                required: false
              },
              answer: {
                 type: String,
-                required: false
              },
              choices: {
                 types: [String],
-                required: false
              }
         }
     ],

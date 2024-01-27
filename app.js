@@ -1,4 +1,4 @@
-import config from './configs/config.js';
+import config from './config/config.config.js';
 import http from 'http';
 import httpShutdown from "http-shutdown";
 

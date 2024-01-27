@@ -1,6 +1,6 @@
-import express from './configs/express.js'
+import configs from './configs'
 
-const framework = express;
+const framework = configs.framework;
 
 let httpServer = require("http").Server(framework);
 

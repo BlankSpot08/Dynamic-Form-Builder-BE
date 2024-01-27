@@ -13,11 +13,29 @@ const formSchema = new Schema({
     },
     fields: [   
         {
-            ref: 'Field'
+            label: { 
+                type: String,
+                required: true
+             },
+             placeholder: {
+                type: String,
+                required: false
+             },
+             answer: {
+                type: String,
+                required: false
+             },
+             choices: {
+                types: [String],
+                required: false
+             }
         }
-    ]
+    ],
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 })
 
 const Form = model('Form', formSchema);
-
 export default Form;

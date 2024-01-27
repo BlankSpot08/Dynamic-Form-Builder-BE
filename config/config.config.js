@@ -1,11 +1,7 @@
 import express from './express.config.js'
-import env from './env/env.config.env.js'
+import environment from './env/env.config.env.js'
 import database from './database.config.js'
 
-const configurations = {
-    framework: express, 
-    environment: env,
-    database: database
-};
+const framework = express;
 
-export default configurations;
+export { framework, environment, database}

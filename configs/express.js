@@ -1,10 +1,10 @@
-import express from 'express'
+import express from 'express';
 
-const app = express()
+const app = express();
 
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // app.use('/api', routes)
 
-export default app
+export default app;

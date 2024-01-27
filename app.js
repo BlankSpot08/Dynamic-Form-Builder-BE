@@ -3,10 +3,8 @@ import http from 'http';
 import httpShutdown from "http-shutdown";
 
 const framework = config.framework;
-
 let httpServer = http.Server(framework);
 
-// Wrap the server object with kkkadditional functionality.
 httpServer = httpShutdown(httpServer);
 
 httpServer.once("close", function () {

@@ -35,7 +35,6 @@ export async function create(fields) {
             newFields.push({
                 "label": currentField.inputLabel,
                 "placeholder": currentField.inputPlaceholder,
-                "answer": currentField.inputAnswer,
                 "type": currentField.inputType,
             })
 

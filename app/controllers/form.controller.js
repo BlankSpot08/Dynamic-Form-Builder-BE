@@ -42,19 +42,3 @@ export async function create(req, res) {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 }
-
-export async function update(req, res) {
-    try {
-        const { answers } = req.body
-        const { title } = req.params
-
-        const update = await formService.update(answers, title);
-
-        res.status(200).json({"message": "Created successfully."})
-    }
-
-    catch(error) {
-        console.error('Controller error:', error.message);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-}

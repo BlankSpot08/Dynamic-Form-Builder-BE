@@ -1,4 +1,4 @@
-import { getAll, getByTitle, create, update } from '../controllers/form.controller.js'
+import { getAll, getByTitle, create } from '../controllers/form.controller.js'
 
 import express from 'express'
 const router = express.Router()
@@ -6,6 +6,5 @@ const router = express.Router()
 router.get('/get-all', getAll);
 router.get('/get/:title', getByTitle);
 router.post('/create', create);
-router.put('/update/:title', update);
     
 export default router

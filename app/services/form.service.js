@@ -38,16 +38,3 @@ export async function create(fields) {
         throw new Error('Error in UserService');
     }
 }
-
-export async function update(answers, title) {
-    try {
-        const update = await formRepository.update(answers, title);
-
-        return update;
-    } 
-    
-    catch(error) {
-        console.error('Service error:', error.message);
-        throw new Error('Error in UserService');
-    }
-}

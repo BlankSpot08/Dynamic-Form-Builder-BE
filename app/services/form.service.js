@@ -26,9 +26,11 @@ export async function getByTitle(title) {
     }
 }
 
-export async function create() {
+export async function create(fields) {
     try {
-        return "test";
+        const create = await formRepository.create(fields);
+
+        return create
     } 
     
     catch(error) {

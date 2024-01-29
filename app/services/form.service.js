@@ -39,9 +39,11 @@ export async function create(fields) {
     }
 }
 
-export async function update() {
+export async function update(answers, title) {
     try {
-        return "test";
+        const update = await formRepository.update(answers, title);
+
+        return update;
     } 
     
     catch(error) {

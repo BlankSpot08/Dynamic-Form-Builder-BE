@@ -9,6 +9,7 @@ const formSchema = new Schema({
     },
     description: {
         type: String,
+        required: true
     },
     fields: [   
         {

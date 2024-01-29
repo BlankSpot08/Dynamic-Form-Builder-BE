@@ -1,10 +1,23 @@
-import { getAll, get, update } from "../repositories/form.repository";
+import * as formRepository from '../repositories/form.repository.js';
 
 export async function getAll() {
     try {
-        const forms = await getAll();
+        const forms = await formRepository.getAll();
 
         return forms;
+    }
+    
+    catch(error) {
+        console.error('Service error:', error.message);
+        throw new Error('Error in UserService');
+    }
+}
+
+export async function getByTitle(title) {
+    try {
+        const form = await formRepository.getByTitle(title);
+
+        return form;
     } 
     
     catch(error) {
@@ -13,22 +26,24 @@ export async function getAll() {
     }
 }
 
-export function get() {
+export async function create() {
     try {
-
+        return "test";
     } 
     
     catch(error) {
-
+        console.error('Service error:', error.message);
+        throw new Error('Error in UserService');
     }
 }
 
-export function update() {
+export async function update() {
     try {
-
+        return "test";
     } 
     
     catch(error) {
-
+        console.error('Service error:', error.message);
+        throw new Error('Error in UserService');
     }
 }

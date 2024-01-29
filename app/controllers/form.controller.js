@@ -15,7 +15,7 @@ export async function getAll(req, res) {
 
 export async function getByTitle(req, res) {
     try {
-        const { title } = req.body
+        const { title } = req.params
         
         const form = await formService.getByTitle(title);
 
@@ -44,8 +44,4 @@ export async function create(req, res) {
 }
 
 export async function update(req, res) {
-}
-
-export async function test() {
-    
 }

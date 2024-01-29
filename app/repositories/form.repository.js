@@ -59,9 +59,21 @@ export async function create(fields) {
     }
 }
 
-export async function update() {
+export async function update(answers, title) {
     try {
-        return 'forms'
+        const form = await Form.findOne({ title: title });
+
+        if (!form) {
+            throw new Error('Form not found');
+        }
+
+        for (let i = 0; i < answers.length;i++) {
+            form.fields[i].answer = answers[i];
+        }
+
+        const updatedForm = await form.save();
+
+        return updatedForm
     } 
     
     catch(error) {

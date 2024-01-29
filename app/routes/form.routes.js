@@ -6,6 +6,6 @@ const router = express.Router()
 router.get('/get-all', getAll);
 router.get('/get/:title', getByTitle);
 router.post('/create', create);
-router.put('/update', update);
+router.put('/update/:title', update);
     
 export default router

@@ -4,7 +4,7 @@ import express from 'express'
 const router = express.Router()
 
 router.get('/get-all', getAll);
-router.get('/get', getByTitle);
+router.get('/get/:title', getByTitle);
 router.post('/create', create);
 router.put('/update', update);
     

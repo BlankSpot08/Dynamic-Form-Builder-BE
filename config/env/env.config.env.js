@@ -1,4 +1,4 @@
-import development from './development.configs.env.js'
+import development from './development.config.env.js'
 
 const env = process.env.NODE_ENV || 'development';
 const environments = { development };

@@ -1,6 +1,5 @@
 import * as formService from '../services/form.service.js'
 
-
 export async function getAll(req, res) {
     try {
         const forms = await formService.getAll();
@@ -31,7 +30,11 @@ export async function getByTitle(req, res) {
 
 export async function create(req, res) {
     try {
-        console.log
+        const { fields } = req.body
+
+        const create = await formService.create(fields);
+
+        res.status(200).json({"message": "Created successfully."})
     }
 
     catch(error) {

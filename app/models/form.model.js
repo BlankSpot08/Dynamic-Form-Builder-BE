@@ -16,16 +16,19 @@ const formSchema = new Schema({
             label: { 
                 type: String,
                 required: true
-             },
-             placeholder: {
+            },
+            placeholder: {
                 type: String,
-             },
-             answer: {
+            },
+            answer: {
                 type: String,
-             },
-             choices: {
-                types: [String],
-             }
+            },
+            type: {
+                type: String
+            },
+            choices: {
+                type: [String],
+            },
         }
     ],
     createdAt: {

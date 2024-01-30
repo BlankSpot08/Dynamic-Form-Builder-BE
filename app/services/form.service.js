@@ -9,7 +9,7 @@ export async function getAll() {
     
     catch(error) {
         console.error('Service error:', error.message);
-        throw new Error('Error in UserService');
+        throw new Error('Error in FormService');
     }
 }
 
@@ -22,7 +22,7 @@ export async function getByTitle(title) {
     
     catch(error) {
         console.error('Service error:', error.message);
-        throw new Error('Error in UserService');
+        throw new Error('Error in FormService');
     }
 }
 
@@ -35,6 +35,6 @@ export async function create(fields) {
     
     catch(error) {
         console.error('Service error:', error.message);
-        throw new Error('Error in UserService');
+        throw new Error('Error in FormService');
     }
 }

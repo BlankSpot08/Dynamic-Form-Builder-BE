@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
-const formSchema = new Schema({
+const submissionSchema = new Schema({
     form: {
         type: Schema.Types.ObjectId,
         ref: 'Form'
@@ -13,5 +13,5 @@ const formSchema = new Schema({
     }
 })
 
-const Form = model('Submission', formSchema);
-export default Form;
+const Submission = model('Submission', submissionSchema);
+export default Submission;

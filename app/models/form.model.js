@@ -19,10 +19,8 @@ const formSchema = new Schema({
             },
             placeholder: {
                 type: String,
-            },
-            answer: {
-                type: String,
-            },
+                default: 'Enter your input here...'
+             },
             type: {
                 type: String
             },

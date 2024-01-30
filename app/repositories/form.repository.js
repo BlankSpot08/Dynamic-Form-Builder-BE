@@ -9,6 +9,7 @@ export async function getAll() {
     
     catch(error) {
         console.error('Repository error:', error.message);
+        throw new Error('Error retrieving forms from the database');
     }
 }
 

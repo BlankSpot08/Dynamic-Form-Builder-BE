@@ -7,12 +7,12 @@ let httpServer = http.Server(framework);
 httpServer = httpShutdown(httpServer);
 
 httpServer.once("close", function () {
-    logger.log(" Server closed.");
+    console.log(" Server closed.");
 });
 
 httpServer.once("error", function (err) {
-    logger.log(" Server Error:");
-    logger.log(err);
+    console.log(" Server Error:");
+    console.log(err);
 });
 
 const port = environment.PORT
